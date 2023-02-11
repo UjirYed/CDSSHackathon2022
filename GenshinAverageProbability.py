@@ -20,7 +20,8 @@ for pity in range(1,11):
     num = fourStarData[fourStarData["pity"] == pity].shape[0]
     sum1 += num
     sum2 += num * pity
-
+    
+    #We store the probabilty of success given a certain pity level.
     FourStarPity.append(num / fourStarData[fourStarData["pity"] >= pity].shape[0])
 
 print("Observed avg prob for 4-star: " + str(sum1/sum2))
@@ -70,7 +71,7 @@ for pity in range(1,91):
     num = fiveStarData[fiveStarData["pity"] == pity].shape[0]
     sum1 += num
     sum2 += num * pity
-
+    #We store the probabilty of success given a certain pity level.
     fiveStarPity.append(num / fiveStarData[fiveStarData["pity"] >= pity].shape[0])
 
 
